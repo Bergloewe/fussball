@@ -67,8 +67,9 @@ def read_spiele(liga):
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
     cursor.execute('SELECT * FROM {liga}'.format(liga=liga))
-    print(cursor.fetchall())
+    tb = cursor.fetchall()
     connection.close()
+    return tb
 
 
 # In[7]:
