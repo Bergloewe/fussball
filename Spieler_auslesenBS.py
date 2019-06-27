@@ -10,7 +10,7 @@ import string
 
 # id = 0 durch id wird set unnötig
 Spielerbib = set()
-
+s
 # um alle Spieler zu erfassen müssen beide Buchstaben Aa, Ab durchgeklickt werden
 for first_letter in string.ascii_lowercase:
     for second_letter in string.ascii_lowercase:
@@ -42,6 +42,7 @@ for first_letter in string.ascii_lowercase:
             # if ((id,name,link) in Spielerbib) == False:
             # id = id + 1
             Spielerbib.add((name, link))
+
 
 with open('Spielerbib.csv', 'w', newline='', encoding='utf-8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='; ', quotechar='"', quoting=csv.QUOTE_MINIMAL)
