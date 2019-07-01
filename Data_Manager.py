@@ -36,7 +36,15 @@ def read_spiele(liga):
     row = cursor.fetchall()
     connection.close()
     return row
-    
+   
+def select_spiel_id(team1_id, date):
+    connection = sqlite3.connect("spiele.db")
+    cursor = connection.cursor()
+    sql_command = "SELECT game_id FROM bundesliga WHERE team1_id= (?) AND date= (?)"
+    cursor.execute(sql_command, [team1_id, date])
+    spiel_id = cursor.fetchone()
+    connection.close()
+    return spiel_id    
 
 
 # In[ ]:
@@ -76,7 +84,7 @@ def insert_liga3(values):
 def set_quote():
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
-    sql_command = 'CREATE TABLE quote (id INTEGER PRIMARY KEY, date DATETIME, team1 VARCHAR(30) NOT NULL, quote_sieg INTEGER, quote_un INTEGER, quote_lost INTEGER)'
+    sql_command = 'CREATE TABLE quote (id INTEGER PRIMARY KEY, date DATETIME, spiel_id INTEGER NOT NULL, quote_sieg INTEGER, quote_un INTEGER, quote_lost INTEGER)'
     cursor.execute(sql_command)
     connection.commit()
     connection.close()
@@ -93,7 +101,7 @@ def drop_quote():
 def insert_quote(values):
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
-    sql_command = "INSERT INTO quote (date, team1, quote_sieg, quote_un, quote_lost) VALUES (?,?,?,?,?)"
+    sql_command = "INSERT INTO quote (date, spiel_id, quote_sieg, quote_un, quote_lost) VALUES (?,?,?,?,?)"
     cursor.executemany(sql_command, values)
     connection.commit()
     connection.close()
@@ -145,10 +153,19 @@ def read_team_link():
     connection.close()
     return row
 
-def select_team_id(name):
+def select_team_id(link):
     connection = sqlite3.connect("teams.db")
     cursor = connection.cursor()
     sql_command = "SELECT team_id FROM teams WHERE link LIKE (?)"
+    cursor.execute(sql_command, link)
+    team_id = cursor.fetchone()
+    connection.close()
+    return team_id
+
+def try_select_team_id(name):
+    connection = sqlite3.connect("teams.db")
+    cursor = connection.cursor()
+    sql_command = "SELECT team_id FROM teams WHERE name LIKE (?)"
     cursor.execute(sql_command, name)
     team_id = cursor.fetchone()
     connection.close()
