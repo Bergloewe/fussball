@@ -10,37 +10,44 @@ import sqlite3
 # In[ ]:
 
 
-def set_spiele(liga):
+def set_games():
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
-    sql_command = 'CREATE TABLE {liga} (game_id INTEGER PRIMARY KEY, team1_id INTEGER NOT NULL, tore_heim INTEGER, tore_aus INTEGER, team2_id INTEGER NOT NULL, date DATETIME )'.format(liga=liga)
+    sql_command = 'CREATE TABLE games (game_id INTEGER PRIMARY KEY, team1_id INTEGER NOT NULL, tore_heim INTEGER, tore_aus INTEGER, team2_id INTEGER NOT NULL, date DATETIME, liga VARCHAR(20))'
     cursor.execute(sql_command)
     connection.commit()
     connection.close()
-    print( 'table ', liga, ' has been set')
+    print( 'Create games tbl')
 
-def reset_spiele(liga):
+def drop_games():
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
-    cursor.execute('DROP TABLE {liga}'.format(liga=liga))
-    sql_command = 'CREATE TABLE {liga} (game_id INTEGER PRIMARY KEY, team1_id INTEGER NOT NULL, tore_heim INTEGER, tore_aus INTEGER, team2_id INTEGER NOT NULL, date DATETIME )'.format(liga=liga)
-    cursor.execute(sql_command)
+    cursor.execute('DROP TABLE games')
     connection.commit()
     connection.close()
-    print( 'table ', liga, ' has been reset')
-
-def read_spiele(liga):
+    print( 'drop table games')
+    
+def insert_games(values):
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
-    cursor.execute('SELECT * FROM {liga}'.format(liga=liga))
+    sql_command = "INSERT INTO games (team1_id, tore_heim, tore_aus, team2_id, date, liga) VALUES (?,?,?,?,?,?)"
+    cursor.executemany(sql_command, values)
+    connection.commit()
+    connection.close()
+    print('insert games')
+
+def read_games():
+    connection = sqlite3.connect("spiele.db")
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM games')
     row = cursor.fetchall()
     connection.close()
     return row
    
-def select_spiel_id(team1_id, date):
+def select_game_id(team1_id, date):
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
-    sql_command = "SELECT game_id FROM bundesliga WHERE team1_id= (?) AND date= (?)"
+    sql_command = "SELECT game_id FROM games WHERE team1_id= (?) AND date= (?)"
     cursor.execute(sql_command, [team1_id, date])
     spiel_id = cursor.fetchone()
     connection.close()
@@ -50,62 +57,39 @@ def select_spiel_id(team1_id, date):
 # In[ ]:
 
 
-def insert_bundesliga(values):
+def set_quotes():
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
-    sql_command = "INSERT INTO bundesliga (team1_id, tore_heim, tore_aus, team2_id, date) VALUES (?,?,?,?,?)"
-    cursor.executemany(sql_command, values)
-    connection.commit()
-    connection.close()
-    print('stored in bundesliga')
-
-def insert_liga2(values):
-    connection = sqlite3.connect("spiele.db")
-    cursor = connection.cursor()
-    sql_command = "INSERT INTO liga2 (team1_id, tore_heim, tore_aus, team2_id, date) VALUES (?,?,?,?,?)"
-    cursor.executemany(sql_command, values)
-    connection.commit()
-    connection.close()
-    print('stored in liga2')
-
-def insert_liga3(values):
-    connection = sqlite3.connect("spiele.db")
-    cursor = connection.cursor()
-    sql_command = "INSERT INTO liga3 (team1_id, tore_heim, tore_aus, team2_id, date) VALUES (?,?,?,?,?)"
-    cursor.executemany(sql_command, values)
-    connection.commit()
-    connection.close()
-    print('stored in liga3')
-
-
-# In[ ]:
-
-
-def set_quote():
-    connection = sqlite3.connect("spiele.db")
-    cursor = connection.cursor()
-    sql_command = 'CREATE TABLE quote (id INTEGER PRIMARY KEY, date DATETIME, spiel_id INTEGER NOT NULL, quote_sieg INTEGER, quote_un INTEGER, quote_lost INTEGER)'
+    sql_command = 'CREATE TABLE quotes (id INTEGER PRIMARY KEY, date DATETIME, game_id INTEGER NOT NULL, quote_sieg INTEGER, quote_un INTEGER, quote_lost INTEGER)'
     cursor.execute(sql_command)
     connection.commit()
     connection.close()
-    print( 'table quote has been set')
+    print( 'Create quotes tbl')
 
-def drop_quote():
+def drop_quotes():
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
-    cursor.execute('DROP TABLE quote')
+    cursor.execute('DROP TABLE quotes')
     connection.commit()
     connection.close()
-    print( 'drop table quote')
+    print( 'drop table quotes')
 
-def insert_quote(values):
+def insert_quotes(values):
     connection = sqlite3.connect("spiele.db")
     cursor = connection.cursor()
-    sql_command = "INSERT INTO quote (date, spiel_id, quote_sieg, quote_un, quote_lost) VALUES (?,?,?,?,?)"
+    sql_command = "INSERT INTO quotes (date, game_id, quote_sieg, quote_un, quote_lost) VALUES (?,?,?,?,?)"
     cursor.executemany(sql_command, values)
     connection.commit()
     connection.close()
-    print('stored in quote')
+    print('insert quotes')
+    
+def read_quotes():
+    connection = sqlite3.connect("spiele.db")
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM quotes')
+    row = cursor.fetchall()
+    connection.close()
+    return row
 
 
 # In[ ]:
