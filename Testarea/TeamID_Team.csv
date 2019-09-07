@@ -1,0 +1,139 @@
+team_id,name,link
+1,FC Augsburg,fc-augsburg
+2,VfB Stuttgart,vfb-stuttgart
+3,Arminia Bielefeld,arminia-bielefeld
+4,Dynamo Dresden,dynamo-dresden
+5,Hannover 96,hannover-96
+6,SC Paderborn 07,sc-paderborn-07
+7,Wuppertaler SV,wuppertaler-sv
+8,FC St. Pauli,fc-st-pauli
+9,MSV Duisburg,msv-duisburg
+10,Borussia Dortmund,borussia-dortmund
+11,Eintracht Braunschweig,eintracht-braunschweig
+12,SpVgg Greuther Fürth,spvgg-greuther-fuerth
+13,1. FC Union Berlin,1-fc-union-berlin
+14,SV Waldhof Mannheim,sv-waldhof-mannheim
+15,FC Energie Cottbus,fc-energie-cottbus
+16,Rot-Weiss Essen,rot-weiss-essen
+17,FC Lok Leipzig,1-fc-lokomotive-leipzig
+18,1. FC Saarbrücken,1-fc-saarbruecken
+19,Fortuna Köln,fortuna-koeln
+20,SV Tasmania Berlin,sv-tasmania-berlin
+21,Borussia Neunkirchen,borussia-neunkirchen
+22,Alemannia Aachen,alemannia-aachen
+23,VfL Bochum,vfl-bochum
+24,SSV Ulm 1846,ssv-ulm-1846
+25,1. FC Kaiserslautern,1-fc-kaiserslautern
+26,Preußen Münster,preussen-muenster
+27,Fortuna Düsseldorf,fortuna-duesseldorf
+28,SV Werder Bremen,sv-werder-bremen
+29,Hansa Rostock,hansa-rostock
+30,RB Leipzig,rb-leipzig
+31,Tennis Borussia Berlin,tennis-borussia-berlin
+32,Rot-Weiß Oberhausen,rot-weiss-oberhausen
+33,Karlsruher SC,karlsruher-sc
+34,Stuttgarter Kickers,stuttgarter-kickers
+35,FC Schalke 04,fc-schalke-04
+36,Bayer Leverkusen,bayer-leverkusen
+37,1899 Hoffenheim,1899-hoffenheim
+38,Kickers Offenbach,kickers-offenbach
+39,Eintracht Frankfurt,eintracht-frankfurt
+40,Hertha BSC,hertha-bsc
+41,VfL Wolfsburg,vfl-wolfsburg
+42,1. FC Nürnberg,1-fc-nuernberg
+43,SV Darmstadt 98,sv-darmstadt-98
+44,FC Bayern München,fc-bayern-muenchen
+45,KFC Uerdingen 05,kfc-uerdingen-05
+46,FC Ingolstadt 04,fc-ingolstadt-04
+47,Blau-Weiß 90 Berlin,blau-weiss-90-berlin
+48,SpVgg Unterhaching,spvgg-unterhaching
+49,1. FC Köln,1-fc-koeln
+50,SG Wattenscheid 09,sg-wattenscheid-09
+51,FC 08 Homburg,fc-08-homburg
+52,TSV 1860 München,tsv-1860-muenchen
+53,Borussia Mönchengladbach,borussia-moenchengladbach
+54,Hamburger SV,hamburger-sv
+55,1. FSV Mainz 05,1-fsv-mainz-05
+56,SC Freiburg,sc-freiburg
+57,Wacker Burghausen,wacker-burghausen
+58,Röchling Völklingen,roechling-voelklingen
+59,VfB Eppingen,vfb-eppingen
+60,SC Charlottenburg,sc-charlottenburg
+61,Hallescher FC,hallescher-fc
+62,VfR Wormatia Worms,vfr-wormatia-worms
+63,ESV Ingolstadt,esv-ingolstadt
+64,TuS Schloß Neuhaus,tus-schloss-neuhaus
+65,HSV Barmbek-Uhlenhorst,hsv-barmbek-uhlenhorst
+66,VfR 1910 Bürstadt,vfr-1910-buerstadt
+67,FSV Salmrohr,fsv-salmrohr
+68,VfL Osnabrück,vfl-osnabrueck
+69,Schwarz-Weiß Essen,schwarz-weiss-essen
+70,SpVgg Erkenschwick,spvgg-erkenschwick
+71,1. FC Magdeburg,1-fc-magdeburg
+72,Kickers Würzburg,kickers-wuerzburg
+73,OSC Bremerhaven,osc-bremerhaven
+74,VfR Mannheim,vfr-mannheim
+75,TuS Koblenz,tus-koblenz
+76,Westfalia Herne,westfalia-herne
+77,SV Babelsberg 03,sv-babelsberg-03
+78,SV Wehen Wiesbaden,sv-wehen-wiesbaden
+79,1. FC Union Solingen,1-fc-union-solingen
+80,SV Meppen,sv-meppen
+81,DJK Gütersloh,djk-guetersloh
+82,FC Schweinfurt 05,fc-schweinfurt-05
+83,VfB Oldenburg,vfb-oldenburg
+84,Spandauer SV,spandauer-sv
+85,FSV Frankfurt,fsv-frankfurt
+86,DSC Wanne-Eickel,dsc-wanne-eickel
+87,Rot-Weiß Erfurt,rot-weiss-erfurt
+88,FC Remscheid,fc-remscheid
+89,Holstein Kiel,holstein-kiel
+90,TSV Havelse,tsv-havelse
+91,Viktoria Aschaffenburg,viktoria-aschaffenburg
+92,Wacker 04 Berlin,wacker-04-berlin
+93,1. FC Bocholt,1-fc-bocholt
+94,Viktoria Köln,viktoria-koeln
+95,Würzburger FV,wuerzburger-fv
+96,1. FC Mülheim,1-fc-muelheim
+97,Eintracht Bad Kreuznach,eintracht-bad-kreuznach
+98,Jahn Regensburg,jahn-regensburg
+99,FK Pirmasens,fk-pirmasens
+100,Chemnitzer FC,chemnitzer-fc
+101,SSV Reutlingen 05,ssv-reutlingen-05
+102,SpVgg Bayern Hof,spvgg-bayern-hof
+103,BSV Schwenningen,bsv-schwenningen
+104,VfR Aalen,vfr-aalen
+105,SpVgg Bayreuth,spvgg-bayreuth
+106,FC Gütersloh 2000,fc-guetersloh-2000
+107,FSV Zwickau,fsv-zwickau
+108,Olympia Wilhelmshaven,olympia-wilhelmshaven
+109,Eintracht Trier,eintracht-trier
+110,KSV 1964 Baunatal,ksv-1964-baunatal
+111,FC Erzgebirge Aue,fc-erzgebirge-aue
+112,1. FC Heidenheim 1846,1-fc-heidenheim-1846
+113,Sportfreunde Siegen,sportfreunde-siegen
+114,VfR Heilbronn,vfr-heilbronn
+115,Arminia Hannover,arminia-hannover
+116,FC Stahl Brandenburg,fc-stahl-brandenburg
+117,KSV Hessen Kassel,ksv-hessen-kassel
+118,Freiburger FC,freiburger-fc
+119,SC Herford,sc-herford
+120,FC Carl Zeiss Jena,fc-carl-zeiss-jena
+121,MTV 1881 Ingolstadt,mtv-1881-ingolstadt
+122,Rot Weiss Ahlen,rot-weiss-ahlen
+123,I. SC Göttingen 05,i-sc-goettingen-05
+124,SV Sandhausen,sv-sandhausen
+125,Rot-Weiß Lüdenscheid,rot-weiss-luedenscheid
+126,Bonner SC,bonner-sc
+127,OSV Hannover,osv-hannover
+128,FC Hanau 93,fc-hanau-93
+129,VfB Lübeck,vfb-luebeck
+130,Kickers Emden,kickers-emden
+131,Sportfreunde Lotte,sportfreunde-lotte
+132,Borussia Dortmund II,borussia-dortmund-ii
+133,1. FSV Mainz 05 II,1-fsv-mainz-05-ii
+134,FC Bayern München II,fc-bayern-muenchen-ii
+135,VfB Stuttgart II,vfb-stuttgart-ii
+136,SV Werder Bremen II,sv-werder-bremen-ii
+137,SV Elversberg,sv-elversberg
+138,SG Sonnenhof Großaspach,sg-sonnenhof-grossaspach
